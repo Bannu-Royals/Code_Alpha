@@ -1,0 +1,56 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Captcha</title>
+    <meta name="description" content="Login - Register Template">
+    <meta name="author" content="Lorenzo Angelino aka MrLolok">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="last-style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>  
+    <link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.min.css'></link> 
+    
+
+
+
+    <style>
+        body {
+            background-color: #303641;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container-register">
+        <div id="title">
+            <i class="material-icons lock">lock</i> Register
+        </div>
+
+        <form>
+            
+            <div class="g-recaptcha" data-sitekey="6LcuTaInAAAAAPmzqycX94gc6E0WPHkm0QhHrhZr" id="captcha">
+            
+            </div>
+
+            <input type="submit" value="Register" id="reg-button"/>
+        </form>
+
+        
+            
+        </div>
+    </div>
+    <script>
+        var btn = document.getElementById("reg-button")
+        btn.addEventListener("click",(event)=>{
+            swal("Success","You are successfully registered","success")
+            event.preventDefault();
+        })
+    </script>
+</body>
+
+</html>
